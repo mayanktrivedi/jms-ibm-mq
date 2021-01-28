@@ -6,8 +6,8 @@ IBM MQ Link - https://developer.ibm.com/articles/mq-downloads/
  
 Setting UP Queue Manager - 
 Install Docker
-Get the MQ in Docker image - “docker pull ibmcom/mq:latest”
-Run the container from the image - 
+1. Get the MQ in Docker image - “docker pull ibmcom/mq:latest”
+2. Run the container from the image - 
 create docker volume docker volume create mq1data
 docker run --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume mq1data:/mnt/mqm --publish 1414:1414 --publish 9443:9443 --detach --env MQ_APP_PASSWORD=MT9090 ibmcom/mq:latest
 You can display the MQ installation and data paths by running the dspmqver command (display MQ version) in your command line interface.
