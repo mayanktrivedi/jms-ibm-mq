@@ -38,7 +38,7 @@ Create SSL
 4. Create JMS key Store -  keytool -keystore clientkey.jks -storetype jks -importcert -file key.crt -alias server-certificate
 5. Password- mqclientpass
 6. Run container with the certificates - docker run --name mqtls --env LICENSE=accept --env MQ_QMGR_NAME=QM1 --volume /Users/mayanktrivedi/IBMMQ/:/etc/mqm/pki/keys/mykey --publish 1414:1414 --publish 9443:9443 --detach --env MQ_APP_PASSWORD=passw0rd ibmcom/mq:latest
-Verify that security has been enabled - runmqsc QM1, DISPLAY CHANNEL(DEV.APP.SVRCONN)
+7. Verify that security has been enabled - runmqsc QM1, DISPLAY CHANNEL(DEV.APP.SVRCONN)
  
 
 
