@@ -50,6 +50,8 @@ public class JmsPutGet {
             System.setProperty("javax.net.ssl.trustStoreType", "jks");
             System.setProperty("javax.net.ssl.trustStore", "/Users/mayanktrivedi/IBMMQ/clientkey.jks");
             System.setProperty("javax.net.ssl.keyStorePassword", "mqclientpass");
+            //The 2400 MQRC_UNSUPPORTED_CIPHER_SUITE error commonly occurs if using a non-IBM JRE (like Oracle JRE) and
+            //not having the MQ required JVM system argument set:
             System.setProperty("com.ibm.mq.cfg.useIBMCipherMappings", "false");
             // Create a connection factory
             JmsFactoryFactory ff = JmsFactoryFactory.getInstance(WMQConstants.WMQ_PROVIDER);
